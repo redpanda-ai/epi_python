@@ -9,6 +9,12 @@ class BinaryTreeNode:
             return True
         return False
 
+    def __repr__(self):
+        l = "" if self.left is None else self.left.data
+        r = "" if self.right is None else self.right.data
+        return "(data: {}, left: {}, right: {})".format(
+            self.data, l, r)
+
 
 class BinaryTreeNodeParentPointer:
     def __init__(self, data=None, left=None, right=None, parent=None):
